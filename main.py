@@ -5,10 +5,9 @@ app = FastAPI()
 
 
 @app.get("/")
-def ola_mundo():
+def index():
+    """ Return simple object 
     """
-    Retorna meu ojeto  
-    """
-    return {"ola": "mundo"}
+    return {"status_code": "200"}
 
 app.include_router(todo_router, prefix="/todo", tags=["TODO"])
